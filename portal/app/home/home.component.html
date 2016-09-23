@@ -6,8 +6,9 @@
         <table>
             <ul>
                 <li *ngFor="let user of users">
-                    <h5>Username: {{ user.username }}</h5>
-                    <h5>Password: {{ user.password }}</h5>
+                    <h5>username: {{ user.username }}</h5>
+                    <h5>password: {{ user.password }}</h5>
+                    <h5>_links.self.href: {{ user._links.self.href }}</h5>
                 </li>
             </ul>
         </table>
