@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav nav-pills">
+                <li>
+                    <a routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/about" routerLinkActive="active">About Healtrav</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="username" />
+                    <input type="text" class="form-control" placeholder="password" />
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

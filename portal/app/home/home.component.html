@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Welcome to Healtrav</h2>
+
+    <div class="container">
+        <h3>All users</h3>
+        <table>
+            <ul>
+                <li *ngFor="let user of users">
+                    <h5>Username: {{ user.username }}</h5>
+                    <h5>Password: {{ user.password }}</h5>
+                </li>
+            </ul>
+        </table>
+    </div>
+</div>
