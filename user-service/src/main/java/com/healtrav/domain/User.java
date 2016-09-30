@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class User {
     @Id
@@ -15,6 +17,7 @@ public class User {
     @NotNull
     private String username;
 
+    @JsonIgnore
     @NotNull
     private String password;
 
