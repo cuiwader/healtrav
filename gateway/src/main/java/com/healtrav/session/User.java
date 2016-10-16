@@ -1,4 +1,4 @@
-package com.healtrav.domain;
+package com.healtrav.session;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

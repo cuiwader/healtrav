@@ -1,7 +1,8 @@
 <div class="container">
-    <h2>Welcome to Healtrav</h2>
-
-    <div class="container">
+    <div *ngIf="userService.principal === null">
+        <h3>You are not login yet. Please login first</h3>
+    </div>
+    <div *ngIf="userService.principal">
         <h3>All users</h3>
         <table>
             <ul>

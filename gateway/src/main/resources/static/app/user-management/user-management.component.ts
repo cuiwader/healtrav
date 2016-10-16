@@ -3,14 +3,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { User } from '../shared/user';
 import { UserService } from '../shared/user.service';
-import { Subscription } from 'rxjs/Subscription' ;
 
 @Component({
-    templateUrl: '/app/home/home.component.html'
+    templateUrl: '/app/user-management/user-management.component.html'
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class UserManagementComponent implements OnInit, OnDestroy {
 
-    subscription: Subscription;
     users: User[];
 
     constructor(
@@ -30,6 +28,5 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.subscription.unsubscribe();
     }
 }

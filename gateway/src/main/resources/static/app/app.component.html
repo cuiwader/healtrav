@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav nav-pills">
+                <li>
+                    <a routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/user-management" routerLinkActive="active">User Management</a>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="userService.principal === null">
+            <form class="navbar-form navbar-right" #loginForm="ngForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="username" name="username" [(ngModel)]="username" required />
+                    <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]="password" required />
+                </div>
+                <button type="button" class="btn btn-primary" (click)="login()" [disabled]="!loginForm.form.valid">Login</button>
+            </form>
+        </div>
+        <div *ngIf="userService.principal">
+            <p class="navbar-text navbar-right"><b>Welcome to Healtrav, {{ userService.principal.username }}!</b></p>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
